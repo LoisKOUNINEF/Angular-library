@@ -1,6 +1,10 @@
 {
-  "name": "type-writer",
-  "version": "1.0.0",
+  "name": "wizard-angular-type-writer",
+  "version": "1.0.1",
+  "description": "An easy to use typewriting effect for Angular.",
+  "gitrepository": "https://github.com/LoisKOUNINEF/Angular-library/tree/main/projects/type-writer",
+  "author": "Loïs KOUNINEF",
+  "keywords": "Angular, typewriter, typewriting",
   "peerDependencies": {
     "@angular/common": "^17.1.0",
     "@angular/core": "^17.1.0"
