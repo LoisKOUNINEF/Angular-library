@@ -92,11 +92,11 @@ export class TypeWriterComponent implements AfterViewInit {
         this.textArray.length > this.i + this.dontDeleteFor  
         ? this.i += 1 
         : this.dontDeleteFor;
-        this.writeText();
+        setTimeout(this.writeText, 100);
         return;
       } else {
         this.i = this.textArray.length > this.i + 1 ? this.i+= 1 : this.dontDeleteFor;
-        this.writeText();
+        setTimeout(this.writeText, 100);
         return;
       }
       setTimeout(loopDeleting, this.deleteInterval);
