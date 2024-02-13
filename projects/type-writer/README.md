@@ -1,24 +1,19 @@
 # TypeWriter
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+# Easy-to-use typewriter effect for Angular.
 
-## Code scaffolding
-
-Run `ng generate component component-name --project type-writer` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project type-writer`.
-> Note: Don't forget to add `--project type-writer` or else it will be added to the default project in your `angular.json` file. 
-
-## Build
-
-Run `ng build type-writer` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build type-writer`, go to the dist folder `cd dist/type-writer` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test type-writer` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Inputs list :
+### style
+- textArray: string[], default: empty array;
+- textColor: string, default: black;
+- fontSize: string, default: 1.5em;
+- borderWidth: string, default: .5em;
+### milliseconds
+- typingInterval: number, default: 200;
+- deleteInterval: number, default: typingInterval / 2;
+- holdTime: number, default: 1000;
+- delayStart: number, default: 0;
+### custom loop
+- infiniteLoop: boolean, default: true;
+- dontDeleteFor: number, default: 0;
+- removeBlinkIfStop: boolean, default: true;

@@ -26,14 +26,14 @@ export class TypeWriterComponent implements AfterViewInit {
 
   @Input() textArray: Array<string> = [];
   // styles inputs
-  @Input() textColor = "white";
+  @Input() textColor = "black";
   @Input() fontSize = "1.5em";
   @Input() borderWidth = ".5em";
   // setTimeout's milliseconds inputs
   @Input() typingInterval = 200;
   @Input() deleteInterval = this.typingInterval / 2;
   @Input() holdTime = 1000;
-  @Input() delayTime = 0;
+  @Input() delayStart = 0;
   // custom loop inputs
   @Input() infiniteLoop = true;
   @Input() dontDeleteFor = 0;
@@ -46,8 +46,8 @@ export class TypeWriterComponent implements AfterViewInit {
 
   @HostListener('window:load', ['$event'])
   onLoad(): void {
-    setTimeout(this.revealBorder, this.delayTime)
-    setTimeout(this.writeText, (this.delayTime + 500));
+    setTimeout(this.revealBorder, this.delayStart)
+    setTimeout(this.writeText, (this.delayStart + 500));
   };
 
   ngAfterViewInit(): void {
