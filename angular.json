@@ -3,5 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "type-writer": {
+      "projectType": "library",
+      "root": "projects/type-writer",
+      "sourceRoot": "projects/type-writer/src",
+      "prefix": "typewriter",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/type-writer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/type-writer/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/type-writer/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/type-writer/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }
